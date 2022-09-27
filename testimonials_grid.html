@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Testimonials Grid Section</title>
+    <link rel="icon" href="images/favicon-32x32.png">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Big+Shoulders+Display:wght@800&family=Epilogue:wght@500;700&family=Inter:wght@700&family=Karla&family=Lexend+Deca&family=Manrope:wght@500;700&family=Overpass&display=swap');
+
+        body {
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            background-color: rgb(208, 224, 240);
+        }
+
+        .box {
+            position: relative;
+            top: 50px;
+            justify-content: center;
+            height: 70vh;
+            width: 100vh;
+            display: grid;
+            grid-template-columns: 18em 18em 18em 17em;
+            grid-template-rows: 18em 17em;
+            gap: 20px;
+            grid-template-areas:
+                "g1 g1 g2 g3"
+                "g4 g5 g5 g3"
+            ;
+        }
+
+        .items {
+            border: 1px solid transparent;
+            border-radius: 20px;
+            background-color: rgb(38, 62, 62);
+        }
+
+        #g1 {
+            grid-area: g1;
+            border-radius: 20px;
+            background-color: hsl(263, 55%, 52%);
+            background-image: url("images/bg-pattern-quotation.svg");
+            background-repeat: no-repeat;
+            background-size: 105px;
+            background-position: 420px 1px;
+            height: 100%;
+            width: 100%;
+        }
+
+        .id1 {
+            display: flex;
+        }
+
+        .daniel {
+            position: relative;
+            left: 30px;
+            top: 25px;
+        }
+
+        .daniel img {
+            border: 3px solid hsl(263, 51%, 64%);
+            border-radius: 50%;
+            height: 30px;
+            width: 30px;
+        }
+
+        .clif {
+            position: relative;
+            left: 45px;
+            top: 2px;
+        }
+
+        .clif h5 {
+            position: relative;
+            top: 4px;
+            color: white;
+            font-size: 14px;
+            font-family: 'Barlow', sans-serif;
+            font-family: 'Big Shoulders Display', cursive;
+            font-family: 'Epilogue', sans-serif;
+            font-family: 'Fraunces', serif;
+            font-family: 'Inter', sans-serif;
+            font-family: 'Karla', sans-serif;
+            font-family: 'Lexend Deca', sans-serif;
+            font-family: 'Manrope', sans-serif;
+            font-family: 'Overpass', sans-serif;
+        }
+
+        .clif p {
+            position: relative;
+            bottom: 20px;
+            color: hsl(263, 82%, 76%);
+            font-size: 12px;
+            font-family: 'Barlow', sans-serif;
+            font-family: 'Big Shoulders Display', cursive;
+            font-family: 'Epilogue', sans-serif;
+            font-family: 'Fraunces', serif;
+            font-family: 'Inter', sans-serif;
+            font-family: 'Karla', sans-serif;
+            font-family: 'Lexend Deca', sans-serif;
+            font-family: 'Manrope', sans-serif;
+            font-family: 'Overpass', sans-serif;
+        }
+
+        .job1 {
+            position: relative;
+            left: 35px;
+            bottom: 35px;
+        }
+
+        .job1 h3 {
+            font-size: 19px;
+            color: white;
+            margin-right: 50px;
+            font-family: 'Barlow', sans-serif;
+            font-family: 'Big Shoulders Display', cursive;
+            font-family: 'Epilogue', sans-serif;
+            font-family: 'Fraunces', serif;
+            font-family: 'Inter', sans-serif;
+            font-family: 'Karla', sans-serif;
+            font-family: 'Lexend Deca', sans-serif;
+            font-family: 'Manrope', sans-serif;
+            font-family: 'Overpass', sans-serif;
+        }
+        .job1 p{
+            color: hsl(263, 82%, 76%);
+            font-size: 13px;
+            margin-right: 50px;
+            font-family: 'Barlow', sans-serif;
+            font-family: 'Big Shoulders Display', cursive;
+            font-family: 'Epilogue', sans-serif;
+            font-family: 'Fraunces', serif;
+            font-family: 'Inter', sans-serif;
+            font-family: 'Karla', sans-serif;
+            font-family: 'Lexend Deca', sans-serif;
+            font-family: 'Manrope', sans-serif;
+            font-family: 'Overpass', sans-serif;
+        }
+
+        #g2 {
+            grid-area: g2;
+            border-radius: 20px;
+            background-color: hsl(217, 19%, 35%);
+            height: 100%;
+            width: 100%;
+        }
+        .id2 {
+            display: flex;
+        }
+
+        .jonathan{
+            position: relative;
+            left: 30px;
+            top: 25px;
+        }
+
+        .jonathan img {
+            border: 3px solid transparent;
+            border-radius: 50%;
+            height: 30px;
+            width: 30px;
+        }
+
+        .walters {
+            position: relative;
+            left: 45px;
+            top: 2px;
+        }
+
+        .walters h5 {
+            position: relative;
+            top: 4px;
+            color: white;
+            font-size: 14px;
+            font-family: 'Barlow', sans-serif;
+            font-family: 'Big Shoulders Display', cursive;
+            font-family: 'Epilogue', sans-serif;
+            font-family: 'Fraunces', serif;
+            font-family: 'Inter', sans-serif;
+            font-family: 'Karla', sans-serif;
+            font-family: 'Lexend Deca', sans-serif;
+            font-family: 'Manrope', sans-serif;
+            font-family: 'Overpass', sans-serif;
+        }
+
+        .walters p {
+            position: relative;
+            bottom: 20px;
+            color: hsl(262, 9%, 76%);
+            font-size: 12px;
+            font-family: 'Barlow', sans-serif;
+            font-family: 'Big Shoulders Display', cursive;
+            font-family: 'Epilogue', sans-serif;
+            font-family: 'Fraunces', serif;
+            font-family: 'Inter', sans-serif;
+            font-family: 'Karla', sans-serif;
+            font-family: 'Lexend Deca', sans-serif;
+            font-family: 'Manrope', sans-serif;
+            font-family: 'Overpass', sans-serif;
+        }
+
+        .job2 {
+            position: relative;
+            left: 35px;
+            bottom: 35px;
+        }
+
+        .job2 h3 {
+            font-size: 19px;
+            color: white;
+            margin-right: 50px;
+            font-family: 'Barlow', sans-serif;
+            font-family: 'Big Shoulders Display', cursive;
+            font-family: 'Epilogue', sans-serif;
+            font-family: 'Fraunces', serif;
+            font-family: 'Inter', sans-serif;
+            font-family: 'Karla', sans-serif;
+            font-family: 'Lexend Deca', sans-serif;
+            font-family: 'Manrope', sans-serif;
+            font-family: 'Overpass', sans-serif;
+        }
+        .job2 p{
+            color: hsl(262, 9%, 76%);
+            font-size: 13px;
+            margin-right: 65px;
+            font-family: 'Barlow', sans-serif;
+            font-family: 'Big Shoulders Display', cursive;
+            font-family: 'Epilogue', sans-serif;
+            font-family: 'Fraunces', serif;
+            font-family: 'Inter', sans-serif;
+            font-family: 'Karla', sans-serif;
+            font-family: 'Lexend Deca', sans-serif;
+            font-family: 'Manrope', sans-serif;
+            font-family: 'Overpass', sans-serif;
+        }
+
+
+        #g3 {
+            grid-area: g3;
+            border-radius: 20px;
+            background-color: white;
+            height: 100%;
+            width: 100%;
+        }
+        .id3 {
+            display: flex;
+        }
+
+        .kira{
+            position: relative;
+            left: 30px;
+            top: 25px;
+        }
+
+        .kira img {
+            border: 3px solid transparent;
+            border-radius: 50%;
+            height: 30px;
+            width: 30px;
+        }
+
+        .whittle {
+            position: relative;
+            left: 45px;
+            top: 2px;
+        }
+
+        .whittle h5 {
+            position: relative;
+            top: 4px;
+            color: rgb(98, 97, 97);
+            font-size: 14px;
+            font-family: 'Barlow', sans-serif;
+            font-family: 'Big Shoulders Display', cursive;
+            font-family: 'Epilogue', sans-serif;
+            font-family: 'Fraunces', serif;
+            font-family: 'Inter', sans-serif;
+            font-family: 'Karla', sans-serif;
+            font-family: 'Lexend Deca', sans-serif;
+            font-family: 'Manrope', sans-serif;
+            font-family: 'Overpass', sans-serif;
+        }
+
+        .whittle p {
+            position: relative;
+            bottom: 20px;
+            color: hsl(264, 3%, 69%);
+            font-size: 12px;
+            font-family: 'Barlow', sans-serif;
+            font-family: 'Big Shoulders Display', cursive;
+            font-family: 'Epilogue', sans-serif;
+            font-family: 'Fraunces', serif;
+            font-family: 'Inter', sans-serif;
+            font-family: 'Karla', sans-serif;
+            font-family: 'Lexend Deca', sans-serif;
+            font-family: 'Manrope', sans-serif;
+            font-family: 'Overpass', sans-serif;
+        }
+
+        .job3 {
+            position: relative;
+            left: 35px;
+            bottom: 35px;
+        }
+
+        .job3 h3 {
+            font-size: 19px;
+            color: rgb(90, 90, 90);
+            margin-right: 50px;
+            font-family: 'Barlow', sans-serif;
+            font-family: 'Big Shoulders Display', cursive;
+            font-family: 'Epilogue', sans-serif;
+            font-family: 'Fraunces', serif;
+            font-family: 'Inter', sans-serif;
+            font-family: 'Karla', sans-serif;
+            font-family: 'Lexend Deca', sans-serif;
+            font-family: 'Manrope', sans-serif;
+            font-family: 'Overpass', sans-serif;
+        }
+        .job3 p{
+            color: hsl(264, 3%, 69%);
+            font-size: 13px;
+            margin-right: 69.3px;
+            font-family: 'Barlow', sans-serif;
+            font-family: 'Big Shoulders Display', cursive;
+            font-family: 'Epilogue', sans-serif;
+            font-family: 'Fraunces', serif;
+            font-family: 'Inter', sans-serif;
+            font-family: 'Karla', sans-serif;
+            font-family: 'Lexend Deca', sans-serif;
+            font-family: 'Manrope', sans-serif;
+            font-family: 'Overpass', sans-serif;
+        }
+
+        #g4 {
+            grid-area: g4;
+            border-radius: 20px;
+            background-color: white;
+            height: 100%;
+            width: 100%;
+        }
+        .id4 {
+            display: flex;
+        }
+
+        .jeanette{
+            position: relative;
+            left: 30px;
+            top: 25px;
+        }
+
+        .jeanette img {
+            border: 3px solid transparent;
+            border-radius: 50%;
+            height: 30px;
+            width: 30px;
+        }
+
+        .harmon {
+            position: relative;
+            left: 45px;
+            top: 2px;
+        }
+
+        .harmon h5 {
+            position: relative;
+            top: 4px;
+            color: rgb(98, 97, 97);
+            font-size: 14px;
+            font-family: 'Barlow', sans-serif;
+            font-family: 'Big Shoulders Display', cursive;
+            font-family: 'Epilogue', sans-serif;
+            font-family: 'Fraunces', serif;
+            font-family: 'Inter', sans-serif;
+            font-family: 'Karla', sans-serif;
+            font-family: 'Lexend Deca', sans-serif;
+            font-family: 'Manrope', sans-serif;
+            font-family: 'Overpass', sans-serif;
+        }
+
+        .harmon p {
+            position: relative;
+            bottom: 20px;
+            color: hsl(264, 3%, 69%);
+            font-size: 12px;
+            font-family: 'Barlow', sans-serif;
+            font-family: 'Big Shoulders Display', cursive;
+            font-family: 'Epilogue', sans-serif;
+            font-family: 'Fraunces', serif;
+            font-family: 'Inter', sans-serif;
+            font-family: 'Karla', sans-serif;
+            font-family: 'Lexend Deca', sans-serif;
+            font-family: 'Manrope', sans-serif;
+            font-family: 'Overpass', sans-serif;
+        }
+
+        .job4 {
+            position: relative;
+            left: 35px;
+            bottom: 35px;
+        }
+
+        .job4 h3 {
+            font-size: 19px;
+            color: rgb(90, 90, 90);
+            margin-right: 70px;
+            font-family: 'Barlow', sans-serif;
+            font-family: 'Big Shoulders Display', cursive;
+            font-family: 'Epilogue', sans-serif;
+            font-family: 'Fraunces', serif;
+            font-family: 'Inter', sans-serif;
+            font-family: 'Karla', sans-serif;
+            font-family: 'Lexend Deca', sans-serif;
+            font-family: 'Manrope', sans-serif;
+            font-family: 'Overpass', sans-serif;
+        }
+        .job4 p{
+            position: relative;
+            top: 10px;
+            color: hsl(264, 3%, 69%);
+            font-size: 13px;
+            margin-right: 69.3px;
+            font-family: 'Barlow', sans-serif;
+            font-family: 'Big Shoulders Display', cursive;
+            font-family: 'Epilogue', sans-serif;
+            font-family: 'Fraunces', serif;
+            font-family: 'Inter', sans-serif;
+            font-family: 'Karla', sans-serif;
+            font-family: 'Lexend Deca', sans-serif;
+            font-family: 'Manrope', sans-serif;
+            font-family: 'Overpass', sans-serif;
+        }
+
+        #g5 {
+            grid-area: g5;
+            border-radius: 20px;
+            background-color: hsl(219, 29%, 14%);
+            height: 100%;
+            width: 100%;
+        }
+        .id5 {
+            display: flex;
+        }
+
+        .patrick{
+            position: relative;
+            left: 30px;
+            top: 25px;
+        }
+
+        .patrick img {
+            border: 3px solid hsl(263, 51%, 64%);
+            border-radius: 50%;
+            height: 30px;
+            width: 30px;
+        }
+
+        .abrams {
+            position: relative;
+            left: 45px;
+            top: 2px;
+        }
+
+        .abrams h5 {
+            position: relative;
+            top: 4px;
+            color: white;
+            font-size: 14px;
+            font-family: 'Barlow', sans-serif;
+            font-family: 'Big Shoulders Display', cursive;
+            font-family: 'Epilogue', sans-serif;
+            font-family: 'Fraunces', serif;
+            font-family: 'Inter', sans-serif;
+            font-family: 'Karla', sans-serif;
+            font-family: 'Lexend Deca', sans-serif;
+            font-family: 'Manrope', sans-serif;
+            font-family: 'Overpass', sans-serif;
+        }
+
+        .abrams p {
+            position: relative;
+            bottom: 20px;
+            color: hsl(264, 3%, 69%);
+            font-size: 12px;
+            font-family: 'Barlow', sans-serif;
+            font-family: 'Big Shoulders Display', cursive;
+            font-family: 'Epilogue', sans-serif;
+            font-family: 'Fraunces', serif;
+            font-family: 'Inter', sans-serif;
+            font-family: 'Karla', sans-serif;
+            font-family: 'Lexend Deca', sans-serif;
+            font-family: 'Manrope', sans-serif;
+            font-family: 'Overpass', sans-serif;
+        }
+
+        .job5 {
+            position: relative;
+            left: 35px;
+            bottom: 35px;
+        }
+
+        .job5 h3 {
+            font-size: 19px;
+            color: white;
+            margin-right: 60px;
+            font-family: 'Barlow', sans-serif;
+            font-family: 'Big Shoulders Display', cursive;
+            font-family: 'Epilogue', sans-serif;
+            font-family: 'Fraunces', serif;
+            font-family: 'Inter', sans-serif;
+            font-family: 'Karla', sans-serif;
+            font-family: 'Lexend Deca', sans-serif;
+            font-family: 'Manrope', sans-serif;
+            font-family: 'Overpass', sans-serif;
+        }
+        .job5 p{
+            position: relative;
+            top: 8px;
+            color: hsl(264, 3%, 69%);
+            line-height: 20px;
+            font-size: 13px;
+            margin-right: 69.3px;
+            font-family: 'Barlow', sans-serif;
+            font-family: 'Big Shoulders Display', cursive;
+            font-family: 'Epilogue', sans-serif;
+            font-family: 'Fraunces', serif;
+            font-family: 'Inter', sans-serif;
+            font-family: 'Karla', sans-serif;
+            font-family: 'Lexend Deca', sans-serif;
+            font-family: 'Manrope', sans-serif;
+            font-family: 'Overpass', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="items" id="g1">
+            <div class="id1">
+                <div class="daniel">
+                    <img src="images/image-daniel.jpg" alt="Daniel">
+                </div>
+                <div class="clif">
+                    <h5>Daniel Clifford</h5>
+                    <p>Verified Graduate</p>
+                </div>
+            </div>
+            <div class="job1">
+                <h3>I received a job offer mid-course, and the subjects I learned were current, if not more so,
+                    in the company I joined. I honestly feel I got every penny’s worth.</h3>
+                <p>“ I was an EMT for many years before I joined the bootcamp. I’ve been looking to make a
+                    transition and have heard some people who had an amazing experience here. I signed up
+                    for the free intro course and found it incredibly fun! I enrolled shortly thereafter.
+                    The next 12 weeks was the best - and most grueling - time of my life. Since completing
+                    the course, I’ve successfully switched careers, working as a Software Engineer at a VR startup. ”
+                </p>
+            </div>
+        </div>
+        <div class="items" id="g2">
+            <div class="id2">
+                <div class="jonathan"><img src="images/image-jonathan.jpg" alt="Jonathan"></div>
+                <div class="walters">
+                    <h5>Jonathan Walters</h5>
+                    <p>Verified Graduate</p>
+                </div>
+            </div>
+            <div class="job2">
+                <h3>The team was very supportive and kept me motivated</h3>
+                <p>“ I started as a total newbie with virtually no coding skills. I now work as a mobile engineer
+                    for a big company. This was one of the best investments I’ve made in myself. ”</p>
+            </div>
+        </div>
+        <div class="items" id="g3">
+            <div class="id3">
+                <div class="kira"><img src="images/image-kira.jpg" alt="Kira"></div>
+                <div class="whittle">
+                    <h5>Kira Whittle</h5>
+                    <p>Verified Graduate</p>
+                </div>
+            </div>
+            <div class="job3">
+                <h3>Such a life-changing experience. Highly recommended!</h3>
+                <p>“ Before joining the bootcamp, I’ve never written a line of code. I needed some structure from
+                    professionals who can help me learn programming step by step. I was encouraged to enroll by a former
+                    student of theirs who can only say wonderful things about the program. The entire curriculum and
+                    staff did not disappoint. They were very hands-on and I never had to wait long for assistance. The
+                    agile team project, in particular, was outstanding. It took my learning to the next level in a way
+                    that no tutorial could ever have. In fact, I’ve often referred to it during interviews as an example
+                    of my developent experience. It certainly helped me land a job as a full-stack developer after
+                    receiving multiple offers. 100% recommend! ”</p>
+            </div>
+        </div>
+        <div class="items" id="g4">
+            <div class="id4">
+                <div class="jeanette"><img src="images/image-jeanette.jpg" alt="Jeanette"></div>
+                <div class="harmon">
+                    <h5>Jeanette Harmon</h5>
+                    <p>Verified Graduate</p>
+                </div>
+            </div>
+            <div class="job4">
+                <h3>An overall wonderful and rewarding experience</h3>
+                <p>“ Thank you for the wonderful experience! I now have a job I really enjoy, and make a good living
+                    while doing something I love. ”</p>
+            </div>
+        </div>
+        <div class="items" id="g5">
+            <div class="id5">
+                <div class="patrick"><img src="images/image-patrick.jpg" alt="Patrick"></div>
+                <div class="abrams">
+                    <h5>Patrick Abrams</h5>
+                    <p>Verified Graduate</p>
+                </div>
+            </div>
+            <div class="job5">
+                <h3>Awesome teaching support from TAs who did the bootcamp themselves. Getting guidance from them and
+                    learning from their experiences was easy.</h3>
+                <p>“ The staff seem genuinely concerned about my progress which I find really refreshing. The program
+                    gave me the confidence necessary to be able to go out in the world and present myself as a capable
+                    junior developer. The standard is above the rest. You will get the personal attention you need from
+                    an incredible community of smart and amazing people. ”</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
